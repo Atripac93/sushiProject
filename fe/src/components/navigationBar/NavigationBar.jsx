@@ -10,9 +10,7 @@ const NavigationBar = () => {
             alt="logoSushi"
             className="rounded-lg"
           />
-          <h1 className="font-extrabold text-7xl transition ease-out hover:ease-in duration-300">
-            Sushi Mania
-          </h1>
+          <h1 className="font-extrabold text-7xl ">Sushi Mania</h1>
         </div>
       </div>
     </>
