@@ -6,7 +6,7 @@ const Login = () => {
     <>
       <div className="container ">
         <NavigationBar />
-        <form className="flex flex-col items-center gap-5 mt-[100px]">
+        <form className="flex flex-col items-center gap-5 mt-[80px]  border-4 p-6">
           <img
             className="rounded-full"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sushi_platter.jpg/240px-Sushi_platter.jpg"
