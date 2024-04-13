@@ -3,7 +3,7 @@ import React from "react";
 const Seite = () => {
   return (
     <>
-      <div className="rounded-lg"></div>
+      <div className="rounded-lg border-2"></div>
     </>
   );
 };

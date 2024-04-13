@@ -8,7 +8,7 @@ const Content = () => {
   const getSushi = async () => {
     try {
       const resp = await fetch(
-        "https://api.spoonacular.com/recipes/4632/summary"
+        "https://api.spoonacular.com/recipes/complexSearch"
       );
       const data = resp.json();
       setSushi(data);
