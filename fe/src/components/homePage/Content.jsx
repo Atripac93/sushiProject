@@ -23,7 +23,6 @@ const Content = () => {
           ))}
         </Row>
       </Container>
-      <a href="#">Torna sopra!</a>
       <Footer />
     </div>
   );
