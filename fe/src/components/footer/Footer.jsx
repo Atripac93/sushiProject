@@ -1,30 +1,79 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
   return (
     <>
-      <footer className="bg-gray-800 text-white py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-            <div className="mb-2 md:mb-0">
-              <p>&copy; {new Date().getFullYear()} Your Website</p>
-            </div>
-            <div className="flex items-center">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white hover:underline mr-4"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white hover:underline"
-              >
-                Terms of Service
-              </a>
-            </div>
-          </div>
-        </div>
+      <footer className="footer mt-6 py-3 bg-light ">
+        <Container>
+          <Row>
+            <Col md={4}>
+              <h5>Informazioni</h5>
+              <ul className="list-unstyled text-small">
+                <li>
+                  <a className="text-muted" href="#">
+                    Chi siamo
+                  </a>
+                </li>
+                <li>
+                  <a className="text-muted" href="#">
+                    Contatti
+                  </a>
+                </li>
+                <li>
+                  <a className="text-muted" href="#">
+                    Termini e condizioni
+                  </a>
+                </li>
+              </ul>
+            </Col>
+            <Col md={4}>
+              <h5>Servizi</h5>
+              <ul className="list-unstyled text-small">
+                <li>
+                  <a className="text-muted" href="#">
+                    Prodotti
+                  </a>
+                </li>
+                <li>
+                  <a className="text-muted" href="#">
+                    Servizi
+                  </a>
+                </li>
+                <li>
+                  <a className="text-muted" href="#">
+                    Assistenza
+                  </a>
+                </li>
+              </ul>
+            </Col>
+            <Col md={4}>
+              <h5>Seguici</h5>
+              <ul className="list-unstyled text-small">
+                <li>
+                  <a className="text-muted" href="#">
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a className="text-muted" href="#">
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a className="text-muted" href="#">
+                    Instagram
+                  </a>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p className="text-muted">&copy; 2024 SushiMania</p>
+            </Col>
+          </Row>
+        </Container>
       </footer>
     </>
   );

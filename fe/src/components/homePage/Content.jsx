@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { sushiData } from "../../list/sushiData";
+import Card from "../cards/Card";
 import NavigationBar from "../navigationBar/NavigationBar";
-// import Seite from "../Cards/Seite";
+import { nanoid } from "nanoid";
+import { Container, Row } from "react-bootstrap";
+import Footer from "../footer/Footer";
 
 const Content = () => {
-  const [sushi, setSushi] = useState("");
-  console.log(sushi);
-  const getSushi = async () => {
-    try {
-      const resp = await fetch(
-        "https://api.spoonacular.com/recipes/complexSearch"
-      );
-      const data = resp.json();
-      setSushi(data);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  useEffect(() => {
-    getSushi();
-  }, []);
   return (
-    <>
-      <div>
-        <NavigationBar />
-      </div>
-    </>
+    <div>
+      <NavigationBar />
+      <Container>
+        <Row>
+          {sushiData.map((card) => (
+            <Card
+              key={nanoid()}
+              name={card.name}
+              image={card.image}
+              description={card.description}
+              price={card.price}
+            />
+          ))}
+        </Row>
+      </Container>
+      <a href="#">Torna sopra!</a>
+      <Footer />
+    </div>
   );
 };
 
