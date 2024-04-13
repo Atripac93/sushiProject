@@ -1,4 +1,4 @@
-export const sushiData = [
+const sushiData = [
   {
     id: 1,
     name: "Nigiri Salmone",
@@ -100,3 +100,5 @@ export const sushiData = [
       "Cono di alga ripieno di gamberi cotti e verdure fresche, cotte in tempura.",
   },
 ];
+
+export default sushiData;
