@@ -1,23 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import NavigationBar from "../components/navigationBar/NavigationBar";
 
 const Login = () => {
+  const [formData, setFormData] = useState({});
+  console.log(formData);
+
+  const onChangeInput = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
   return (
     <>
       <div className="container ">
         <NavigationBar />
-        <form className="flex flex-col items-center gap-5 mt-[80px] p-6">
+        <form
+          // onSubmit={onSubmit}
+          className="flex flex-col items-center gap-5 mt-[80px] p-6"
+        >
           <img
             className="rounded-full"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sushi_platter.jpg/240px-Sushi_platter.jpg"
             alt="sushiLogo"
           />
           <input
+            onChange={onChangeInput}
+            name="email"
             type="text"
-            placeholder="user name..."
+            placeholder="email..."
             className="rounded hover:w-[200px]  "
           />
           <input
+            onChange={onChangeInput}
+            name="password"
             type="password"
             placeholder="password..."
             className="rounded hover:w-[200px]  "
