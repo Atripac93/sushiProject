@@ -1,0 +1,14 @@
+GET http://localhost:3010
+
+####
+POST http://localhost:3010/createUsers
+Content-Type: application/json
+
+
+{
+    "firstName":"Carlo",
+    "lastName": "Atripla",
+    "email":"carloatrica@gmail.com",
+    "password":"ciccio",
+    "age":"30"
+}
