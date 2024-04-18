@@ -47,10 +47,10 @@ const Login = () => {
         <NavigationBar />
         <form
           onSubmit={onSubmit}
-          className="flex flex-col items-center gap-5 mt-[80px] p-6"
+          className="flex flex-col items-center gap-3 mt-[80px] p-6"
         >
           <img
-            className="rounded-full"
+            className="rounded-full hover:rotate-180"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sushi_platter.jpg/240px-Sushi_platter.jpg"
             alt="sushiLogo"
           />
@@ -59,7 +59,7 @@ const Login = () => {
             name="email"
             type="text"
             placeholder="email..."
-            className="rounded hover:w-[200px]  "
+            className="rounded p-2 bg-gray-300  border-3 border-black hover:w-[200px]  "
             value={formData.email}
           />
           <input
@@ -67,12 +67,12 @@ const Login = () => {
             name="password"
             type="password"
             placeholder="password..."
-            className="rounded hover:w-[200px]  "
+            className="rounded p-2 border-3 bg-gray-300  border-black  hover:w-[200px]  "
             value={formData.password}
           />
           <button
             type="submit"
-            className="bg-violet-500 w-[200px] rounded-lg hover:bg-violet-600 active:bg-violet-700"
+            className="bg-orange-400 w-[200px] rounded-lg font-bold hover:bg-orange-500"
           >
             Login
           </button>

@@ -24,7 +24,7 @@ const Content = () => {
         <div className="flex">
           <a
             href="#"
-            className="mt-[30px] no-underline text-lg font-bold text-red-900"
+            className="mt-[30px] no-underline text-lg font-bold text-white"
           >
             returns on!
           </a>
