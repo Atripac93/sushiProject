@@ -13,7 +13,7 @@ const SushiDetails = () => {
         <img
           src={sushiItem.image}
           alt={sushiItem.name}
-          className="w-80 hover:scale-x-150 transtition delay-500"
+          className="w-60 hover:scale-x-150 transtition delay-500"
         />
         <p className="mt-3">{sushiItem.description}</p>
         <p>Price: €{sushiItem.price}</p>
@@ -25,6 +25,11 @@ const SushiDetails = () => {
           </button>
         </Link>
         <Link to={`/sushi/${id}`}></Link>
+      </div>
+      <div>
+        <Link to={"/home"}>
+          <button className="hover:scale-150">choose other sushi</button>
+        </Link>
       </div>
     </div>
   );

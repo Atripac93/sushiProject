@@ -7,12 +7,14 @@ const Seite = ({ name, price, image, description, id }) => {
   return (
     <>
       <Col xs={12} md={6} lg={6}>
-        <Card style={{ width: "30rem" }}>
+        <Card className="w-30">
           <Link to={`/sushi/${id}`}>
             <Card.Img className={styles.myCard} variant="top" src={image} />
           </Link>
-          <Card.Body>
-            <Card.Title className="p-2 font-sans text-2xl">{name}</Card.Title>
+          <Card.Body className="bg-gray-600">
+            <Card.Title className="p-2 font-bol hover:scale-x-125">
+              {name}
+            </Card.Title>
             <Card.Text>{description}</Card.Text>
             <Card.Text>{price}</Card.Text>
           </Card.Body>

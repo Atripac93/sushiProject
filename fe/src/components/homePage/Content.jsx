@@ -26,7 +26,7 @@ const Content = () => {
             href="#"
             className="mt-[30px] no-underline text-lg font-bold text-red-900"
           >
-            torna su!
+            returns on!
           </a>
         </div>
       </Container>
