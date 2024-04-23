@@ -15,7 +15,9 @@ const Seite = ({ name, price, image, description, id }) => {
             <Card.Title className="p-2 font-bol hover:scale-x-125">
               {name}
             </Card.Title>
-            <Card.Text>{description}</Card.Text>
+            <Card.Text className="p-2 rounded-lg border-3 border-white">
+              {description}
+            </Card.Text>
             <Card.Text>{price}</Card.Text>
           </Card.Body>
         </Card>
