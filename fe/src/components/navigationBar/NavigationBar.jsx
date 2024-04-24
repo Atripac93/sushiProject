@@ -13,7 +13,7 @@ const NavigationBar = () => {
           <div className="flex">
             <h1 className="font-extrabold text-7xl text-white ">Sushi</h1>
             <h1 className="font-extrabold text-7xl text-black bg-orange-400">
-              Mania
+              Hub
             </h1>
           </div>
         </div>
