@@ -5,14 +5,14 @@ const Carrello = () => {
 
   return (
     <div className="flex px-5 py-5 justify-center items-center">
-      <h1 className="font-bold">Sushi Cart</h1>
+      <h1 className="font-bold text-black bg-orange-400 p-3">Sushi Cart</h1>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="w-10 h-10"
+        class="w-20 h-20 text-orange-400"
       >
         <path
           stroke-linecap="round"
@@ -26,6 +26,26 @@ const Carrello = () => {
           <li key={index}>{prodotto.nome}</li>
         ))}
       </ul>
+      <footer className="flex gap-3">
+        <small className="text-white">Qty: 1</small>
+        <button className="text-white">+</button>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </footer>
     </div>
   );
 };
