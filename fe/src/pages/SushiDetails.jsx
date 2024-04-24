@@ -1,11 +1,18 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import sushiData from "../list/sushiData";
-import { Link } from "react-router-dom";
 
-const SushiDetails = () => {
+const SushiDetails = ({ addToCart }) => {
   const { id } = useParams();
   const sushiItem = sushiData.find((card) => card.id === parseInt(id));
+
+  const handleAddToCart = () => {
+    if (typeof addToCart === "function") {
+      addToCart(sushiItem);
+    } else {
+      console.error("addToCart is not a function!");
+    }
+  };
 
   return (
     <div className="container flex flex-col items-baseline gap-5">
@@ -21,20 +28,21 @@ const SushiDetails = () => {
           Price: €{sushiItem.price}
         </p>
       </div>
-      <div className="flex gap-3">
-        <Link to={"/carrello"}>
-          <button className=" bg-orange-400 text-black rounded-lg w-[200px] p-2 font-bold hover:scale-125 transtition delay-150">
-            Add to basket
+      <div className="flex gap-5">
+        <Link to="/carrello">
+          <button
+            onClick={handleAddToCart}
+            className="bg-orange-400 text-black rounded-lg w-[200px] p-2 font-bold hover:scale-125 transition delay-100"
+          >
+            Go to cart!
           </button>
         </Link>
-        <Link to={`/sushi/${id}`}></Link>
-        <div>
-          <Link to={"/home"}>
-            <button className=" bg-orange-400 text-black rounded-lg p-2 font-bold hover:scale-125 mb-3">
-              choose other sushi
-            </button>
-          </Link>
-        </div>
+
+        <Link to={"/Home"}>
+          <button className="bg-orange-400 text-black rounded-lg w-[200px] p-2 font-bold hover:scale-125 transition delay-100">
+            Come back
+          </button>
+        </Link>
       </div>
     </div>
   );

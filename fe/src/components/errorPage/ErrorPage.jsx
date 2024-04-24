@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
@@ -9,9 +10,11 @@ const ErrorPage = () => {
         alt="errorPage"
       />
 
-      <a href="./" className="text-3xl hover:text-orange-800">
-        Ritorna al Login!!!
-      </a>
+      <Link to={"/"}>
+        <button className="bg-orange-400 text-black rounded-lg w-[200px] p-2 font-bold hover:scale-125 transition delay-100">
+          Come back to Login
+        </button>
+      </Link>
     </>
   );
 };
