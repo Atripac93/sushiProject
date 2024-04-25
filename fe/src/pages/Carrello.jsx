@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import sushiData from "../list/sushiData";
 import { Link } from "react-router-dom";
-const Carrello = () => {
+const Carrello = ({ id }) => {
   const [carrello, setCarrello] = useState([]);
+  console.log(id);
 
   const aggiungiAlCarrello = (prodotto) => {
     setCarrello([...carrello, prodotto]);
@@ -78,9 +79,9 @@ const Carrello = () => {
             </button>
           </Link>
 
-          <Link to={"/SushiDetails "}>
+          <Link to={-1}>
             <button className="bg-orange-400 text-black rounded-lg w-[200px] p-2 font-bold hover:scale-125 transition delay-100">
-              Come back
+              Come to back
             </button>
           </Link>
         </div>
