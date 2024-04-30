@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import sushiData from "../list/sushiData";
 import { Link } from "react-router-dom";
-const Carrello = ({ id }) => {
+const Carrello = () => {
   const [carrello, setCarrello] = useState([]);
-  console.log(id);
 
   const aggiungiAlCarrello = (prodotto) => {
     setCarrello([...carrello, prodotto]);
