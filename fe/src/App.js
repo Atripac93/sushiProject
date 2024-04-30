@@ -5,6 +5,7 @@ import ErrorPage from "./components/errorPage/ErrorPage";
 import Content from "./components/homePage/Content";
 import SushiDetails from "./pages/SushiDetails";
 import Carrello from "./pages/Carrello";
+import PayPage from "./pages/PayPage";
 const App = () => {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/home" element={<Content />} />
           <Route path="/sushi/:id" element={<SushiDetails />} />
           <Route path="/carrello" element={<Carrello />} />
+          <Route path="/PayPage" element={<PayPage />} />
 
           <Route exact path="*" element={<ErrorPage />} />
         </Routes>
