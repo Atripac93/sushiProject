@@ -21,11 +21,6 @@ const SushiDetails = ({ addToCart }) => {
         <h1 className="mt-2 p-3 bg-orange-400 font-bold text-black">
           {sushiItem.name}
         </h1>
-        <img
-          src="https://media.tenor.com/KfFt6rnLdckAAAAj/zeppsushi-zeppelinsupermercados.gif"
-          alt="logoSushi"
-          className="rounded-lg w-[10%]"
-        />
         <div className="flex flex-col font-bold">
           <img
             src={sushiItem.image}
